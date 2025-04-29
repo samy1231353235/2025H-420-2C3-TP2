@@ -1,4 +1,4 @@
-# joueur.py oui
+# joueur.py 
 
 class Joueur:
     def __init__(self, pseudo):
