@@ -16,6 +16,6 @@ class Joueur:
 
     @staticmethod
     def from_dict(data):
-        joueur = Joueur(data["pseudo"], data["age"])
+        joueur = Joueur(data["pseudo"])
         joueur.victoires = data.get("victoires", 0)
         return joueur

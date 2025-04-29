@@ -5,9 +5,8 @@ import json
 
 def lire_csv(chemin):
     """
-    Lire un fichier CSV et retourner la liste des lignes sous forme de dictionnaires.
+    Lire un fichier CSV et retourner la liste des lignes.
     Chaque dictionnaire correspond à une ligne du fichier.
-    Utiliser csv.DictReader.
     """
     pass
 

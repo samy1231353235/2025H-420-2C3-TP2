@@ -17,7 +17,7 @@ class Tournoi:
     def charger_joueurs(self, chemin_csv):
         """
         Lire un fichier CSV contenant les joueurs.
-        Chaque ligne contient un pseudo et un âge.
+        Chaque ligne contient un pseudonyme.
         Pour chaque ligne, créer un objet Joueur et l'ajouter à la liste des joueurs.
         Utiliser la fonction lire_csv() du fichier utils.py.
         """
@@ -32,6 +32,7 @@ class Tournoi:
         Utiliser la fonction lire_csv() du fichier utils.py.
         """
         pass
+        
 
     def saisir_scores(self):
         """
@@ -42,7 +43,22 @@ class Tournoi:
         - Déterminer le gagnant du match
         - Si un gagnant existe (pas d'égalité), appeler enregistrer_victoire() sur le joueur gagnant.
         """
-        pass
+        for match in self.matchs:
+            print(f"Match: {match.joueur1} vs {match.joueur2}")
+            try:
+                score1 = int(input(f"Entrez le score de {match.joueur1}: "))
+                score2 = int(input(f"Entrez le score de {match.joueur2}: "))
+                match.definir_scores(score1, score2)
+                if score1 > score2:
+                    gagnant = next((j for j in self.joueurs if j.pseudo == match.joueur1), None)
+                    if gagnant:
+                        gagnant.enregistrer_victoire()
+                elif score2 > score1:
+                    gagnant = next((j for j in self.joueurs if j.pseudo == match.joueur2), None)
+                    if gagnant:
+                        gagnant.enregistrer_victoire()
+            except ValueError:
+                print("Erreur : Veuillez entrer des scores valides.")
 
     def afficher_classement(self):
         """
@@ -50,14 +66,17 @@ class Tournoi:
         Classer les joueurs du plus grand nombre de victoires au plus petit.
         Afficher leur pseudo et leur nombre de victoires.
         """
-        pass
+        self.joueurs.sort(key=lambda j: j.victoires, reverse=True)
+        print("Classement des joueurs :")
+        for joueur in self.joueurs:
+            print(f"{joueur.pseudo} - Victoires : {joueur.victoires}")
 
     def sauvegarder(self, chemin_json):
         """
         Sauvegarder le tournoi dans un fichier JSON.
         Le fichier doit contenir :
         - le nom du tournoi
-        - la liste des joueurs (convertis en dictionnaires)
+        - la liste des joueurs (convertis en dictionnaires à l'aide de la fonction to_dict déjà implémenté dans la classe Joueur)
         Utiliser la fonction sauvegarder_json() du fichier utils.py.
         """
         pass
