@@ -107,7 +107,7 @@ Vous devez utiliser Git pour versionner votre code tout au long du développemen
 
 ## Fichiers fournis
 
-Vous allez baser votre travail sur le dépôt git suivant : git@github.com:eterriault-prof/2025H-420-2C3-TP2.git  
+Vous allez baser votre travail sur le dépôt git suivant : [https://github.com/eterriault-prof/2025H-420-2C3-TP2](https://github.com/eterriault-prof/2025H-420-2C3-TP2)
 
 
 Arborescence du projet :
@@ -135,6 +135,7 @@ projet_tournoi/
 - **utils.py** : À compléter. Fonctions pour lire des CSV, sauvegarder des fichiers JSON et écrire des fichiers texte.
 - **data/** : Dossier contenant des jeux de données (`joueurs.csv` et `matchs.csv`) pour tester votre application.
 - **UML/** : Dossier où déposer vos diagrammes UML remis en format `.png` ou `.jpg`.
+- **Documents/** : Dossier contenant l'énoncé du TP et le gabarit de la grille de correction.
 - **README.md** : Fichier à remplir avec les informations de votre équipe et, si désiré, des instructions supplémentaires.
 
 ---
@@ -152,7 +153,7 @@ Le travail corrigé sera celui qui se trouve sur la branche `main` au moment de 
 ---
 
 ## Grille d'évaluation
-La grille d’évaluation suivante sera utilisée pour évaluer votre travail.
+La grille d’évaluation se trouve dans le dossier `documents` du dépôt git fourni.
 
 > **Note** : La note finale sera **individuelle**.  
 > Elle peut être **ajustée à la hausse ou à la baisse** selon votre participation au projet (évaluée grâce à vos commits Git et aux observations du professeur en classe).
