@@ -16,3 +16,10 @@ def sauvegarder_json(objet, chemin):
     """
     with open(chemin, 'w', encoding='utf-8') as f:
         json.dump(objet, f, ensure_ascii=False, indent=4)
+
+def ecrire_texte(texte, chemin):
+    """
+    Écrire une chaîne de caractères dans un fichier texte.
+    """
+    with open(chemin, 'w', encoding='utf-8') as f:
+        f.write(texte)
