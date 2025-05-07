@@ -10,3 +10,9 @@ def lire_csv(chemin):
         lecteur = csv.reader(f)
         next(lecteur)  # Ignorer l'en-tête
         return [ligne for ligne in lecteur]
+def sauvegarder_json(objet, chemin):
+    """
+    Sauvegarder un objet Python dans un fichier JSON.
+    """
+    with open(chemin, 'w', encoding='utf-8') as f:
+        json.dump(objet, f, ensure_ascii=False, indent=4)
